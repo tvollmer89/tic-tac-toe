@@ -1,0 +1,17 @@
+/*// styles.scss*/
+.testing {
+  width: percentage(5/7);
+}
+p {
+  display: flex;
+}
+a {
+  color: blue;
+}
+/* Main SCSS File */
+
+// Base
+@import "base/_variables.scss";
+
+// Components
+@import "base/_scaffolding.scss";
