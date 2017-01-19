@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -10,19 +10,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <!--<link rel="stylesheet" href="css/main.css"> -->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <!--build:css css/style.min.css-->
   <link rel="stylesheet" href="css/style.css">
   <!--endbuild-->
-
-  <!--build:js js/main.min.js -->
-  <script src="js/lib/a-library.js"></script>
-  <script src="js/lib/another-library.js"></script>
-  <script src="js/main.js"></script>
-  <!-- endbuild -->
 </head>
 
 <body>
@@ -30,11 +23,85 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
   <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Theresa Vollmer</a>
+        </div>
+        <div id="navbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://www.facebook.com/theresa.vollmer1"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/oTheresARose"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/theresavollmer"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="choiceModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1>Tic Tac Toe</h1>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <p>Would you like to be X or O?</p>
+            </div>
+            <div class="row">
+              <button type="button" id="player-x" class="btn btn-default">X</button>
+              <button type="button" id="player-o" class="btn btn-primary">O</button>
+            </div>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="page-header">
+        <h1>FreeCodeCamp Project</h1>
+      </div>
+      <p class="lead">Build a Tic Tac Toe Game</p>
+      <div class="row">
+        <div class="board">
+          <div class="cell" data-indx="0"></div>
+          <div class="cell" data-indx="1"></div>
+          <div class="cell" data-indx="2"></div>
+          <div class="cell" data-indx="3"></div>
+          <div class="cell" data-indx="4"></div>
+          <div class="cell" data-indx="5"></div>
+          <div class="cell" data-indx="6"></div>
+          <div class="cell" data-indx="7"></div>
+          <div class="cell" data-indx="8"></div>
+        </div>
+      </div>
+    </div>
+
+<!--     <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </footer> -->
+
+
+
   <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script>
   window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')
   </script>
+
+  <!--build:js js/main.min.js -->
+  <script src="js/ai.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+  <!-- endbuild -->
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
