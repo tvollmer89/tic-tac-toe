@@ -1,10 +1,10 @@
 var playerChoice;
 
 // Prompt for player choice
-$(window).load(function() {
-  $('#choiceModal').modal('show');
-  playerChoice = "";
-});
+// $(window).load(function() {
+//   $('#choiceModal').modal('show');
+//   playerChoice = "";
+// });
 
 // Set player choice
 $('#player-x').on('click', function () {

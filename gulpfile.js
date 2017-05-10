@@ -43,9 +43,9 @@ gulp.task('sass', function () {
 gulp.task('useref', function(){
   return gulp.src('app/*.html')
     .pipe(useref({}, lazypipe().pipe(sourcemaps.init, { loadMaps: true })))
-    .pipe(gulpIf('*.js', uglify()))
+    .pipe(gulpIf('app/*.js', uglify()))
     // Minifies only if it's a CSS file
-    .pipe(gulpIf('*.css', cssnano()))
+    .pipe(gulpIf('app/*.css', cssnano()))
     .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest('dist'))
 });
@@ -84,10 +84,21 @@ gulp.task('watch', ['browserSync', 'sass'], function (){
   gulp.watch('app/js/**/*.js', browserSync.reload);
 })
 
-// build
+/*
+Build when fonts are in folder
+ */
+// gulp.task('build', function (callback) {
+//   runSequence('clean:dist',
+//     ['sass', 'useref', 'images', 'fonts'],
+//     callback
+//   )
+// })
+/*
+  Build when fonts are linked
+ */
 gulp.task('build', function (callback) {
   runSequence('clean:dist',
-    ['sass', 'useref', 'images', 'fonts'],
+    ['sass', 'useref', 'images'],
     callback
   )
 })

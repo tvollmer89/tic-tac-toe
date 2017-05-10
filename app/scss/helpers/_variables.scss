@@ -1,0 +1,37 @@
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Abel|Archivo+Narrow|News+Cycle:700');
+
+$abel: 'Abel', sans-serif;
+$archivoNarrow: 'Archivo Narrow', sans-serif;
+$newsCycle: 'News Cycle', sans-serif;
+
+$font-style: normal;
+$font-variant: normal;
+$font-weight: normal;
+$line-height: 1.5;
+
+// Font weights
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+// Base Font
+$font-family-base: $newsCycle !default;
+$font-size-base: 1rem !default;
+$font-weight-base: $font-weight !default;
+$line-height-base: 1.5 !default;
+
+//Colors
+$white: #fff;
+$pink: rgba(246, 232, 234, 1);
+$coral: rgba(239, 98, 108, 1);
+$dark-gray: rgba(34, 24, 28, 1);
+$gray: rgba(49, 47, 47, 1);
+$teal: rgba(132, 220, 207, 1);
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:       $light !default;
+$body-color:    $dark-gray !default;

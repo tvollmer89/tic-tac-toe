@@ -1,0 +1,18 @@
+.board {
+  background-color: transparent;
+  width: 490px;
+  height: 490px;
+  margin: 50px auto;
+  padding: 5px;
+}
+
+.cell {
+  width: 150px;
+  height: 150px;
+  display: block;
+  float: left;
+  color: #EAEAEA;
+  font-size: 6.3em;
+  margin: 5px;
+  background-color: $teal;
+}

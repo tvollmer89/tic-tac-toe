@@ -1,0 +1,11 @@
+.navbar-default {
+  background-color: $dark-gray;
+  border-color: $gray;
+  color: $pink;
+  .navbar-brand, .navbar-nav>li>a {
+    color: $coral;
+    &:hover {
+      color: $pink;
+    }
+  }
+}

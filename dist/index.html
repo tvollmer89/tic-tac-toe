@@ -13,9 +13,7 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="css/style.min.css">
-
-  <script src="js/main.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -23,13 +21,85 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
   <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Theresa Vollmer</a>
+        </div>
+        <div id="navbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://www.facebook.com/theresa.vollmer1"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/oTheresARose"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/theresavollmer"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="choiceModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1>Tic Tac Toe</h1>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <p>Would you like to be X or O?</p>
+            </div>
+            <div class="row">
+              <button type="button" id="x" class="btn" data-dismiss="modal" onClick="setFig(this.id)">X</button>
+              <button type="button" id="o" class="btn" data-dismiss="modal" onClick="setFig(this.id)">O</button>
+            </div>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="page-header">
+        <h1>FreeCodeCamp Projects</h1>
+      </div>
+      <p class="lead">Build a Tic Tac Toe Game</p>
+      <div class='row'>
+        <div class='board'>
+          <!-- data-indx following cell divs represents cell index in 1D array representation -->
+          <div class='cell' id="one"></div>
+          <div class='cell' id="two"></div>
+          <div class='cell' id="three"></div>
+          <div class='cell' id="four"></div>
+          <div class='cell' id="five"></div>
+          <div class='cell' id="six"></div>
+          <div class='cell' id="seven"></div>
+          <div class='cell' id="eight"></div>
+          <div class='cell' id="nine"></div>
+        </div>
+      </div>
+    </div>
+
+<!--     <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </footer> -->
+
+
+
   <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script>
   window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')
   </script>
-  <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="js/main.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+
 </body>
 
 </html>

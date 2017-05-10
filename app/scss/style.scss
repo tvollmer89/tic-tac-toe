@@ -1,8 +1,17 @@
 /* Main SCSS File */
 
-/*// Base*/
-@import "variables.scss";
-@import "scaffolding.scss";
+/*Helpers*/
+@import "helpers/placeholders";
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/typography";
 
 /*Components*/
 @import "components/modal";
+@import "components/board";
+
+/*Layout*/
+@import "layout/base";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/nav";

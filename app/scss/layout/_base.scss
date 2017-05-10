@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  line-height: $line-height-base;
+  color: $body-color;
+  background-color: $body-bg;
+}
+
+.page-header {
+  border-bottom: 1px solid $gray;
+}

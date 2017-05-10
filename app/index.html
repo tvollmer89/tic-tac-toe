@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  <!--build:css css/style.min.css-->
+  <!--build:css css/style.css-->
   <link rel="stylesheet" href="css/style.css">
   <!--endbuild-->
 </head>
@@ -24,7 +24,7 @@
 <![endif]-->
   <!-- Add your site or application content here -->
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">Theresa Vollmer</a>
@@ -51,8 +51,8 @@
               <p>Would you like to be X or O?</p>
             </div>
             <div class="row">
-              <button type="button" id="player-x" class="btn btn-default">X</button>
-              <button type="button" id="player-o" class="btn btn-primary">O</button>
+              <button type="button" id="x" class="btn" data-dismiss="modal" onClick="setFig(this.id)">X</button>
+              <button type="button" id="o" class="btn" data-dismiss="modal" onClick="setFig(this.id)">O</button>
             </div>
           </div>
         </div>
@@ -66,20 +66,21 @@
     <!-- Begin page content -->
     <div class="container">
       <div class="page-header">
-        <h1>FreeCodeCamp Project</h1>
+        <h1>FreeCodeCamp Projects</h1>
       </div>
       <p class="lead">Build a Tic Tac Toe Game</p>
-      <div class="row">
-        <div class="board">
-          <div class="cell" data-indx="0"></div>
-          <div class="cell" data-indx="1"></div>
-          <div class="cell" data-indx="2"></div>
-          <div class="cell" data-indx="3"></div>
-          <div class="cell" data-indx="4"></div>
-          <div class="cell" data-indx="5"></div>
-          <div class="cell" data-indx="6"></div>
-          <div class="cell" data-indx="7"></div>
-          <div class="cell" data-indx="8"></div>
+      <div class='row'>
+        <div class='board'>
+          <!-- data-indx following cell divs represents cell index in 1D array representation -->
+          <div class='cell' id="one"></div>
+          <div class='cell' id="two"></div>
+          <div class='cell' id="three"></div>
+          <div class='cell' id="four"></div>
+          <div class='cell' id="five"></div>
+          <div class='cell' id="six"></div>
+          <div class='cell' id="seven"></div>
+          <div class='cell' id="eight"></div>
+          <div class='cell' id="nine"></div>
         </div>
       </div>
     </div>
@@ -96,14 +97,17 @@
   <script>
   window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')
   </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <!--build:js js/main.min.js -->
-  <script src="js/ai.js"></script>
+<!--   <script src="js/ui.js"></script>
   <script src="js/game.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/control.js"></script> -->
   <script src="js/main.js"></script>
   <!-- endbuild -->
   <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
